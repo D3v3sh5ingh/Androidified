@@ -22,5 +22,4 @@ public class about_team extends AppCompatActivity {
         heading = findViewById(R.id.head);
         heading.setText("Core Team");
     }
-
 }
