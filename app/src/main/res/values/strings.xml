@@ -8,6 +8,7 @@
     <string name="about_us">About team</string>
     <string name="title_activity_about_team">about_team</string>
     <string name="team_desc">Description</string>
+    <string name="Head">Androidified</string>
     <string name="desc_content">We are a team of passionate learners, powered by innovation, driven by
     enthusiasm</string>
 </resources>
