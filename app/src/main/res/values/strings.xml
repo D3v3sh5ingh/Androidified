@@ -11,4 +11,8 @@
     <string name="Head">Androidified</string>
     <string name="desc_content">We are a team of passionate learners, powered by innovation, driven by
     enthusiasm</string>
+    <string name="textview">TextView</string>
+    <string name="androidified_app">Androidified App</string>
+    <string name="an_application_to_do_blah_blah">An Application to do blah blah</string>
+    <string name="todo">TODO</string>
 </resources>
