@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Androidified</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="communicate">Communicate</string>
+    <string name="action_settings">Settings</string>
+    <string name="about_us">About team</string>
+    <string name="title_activity_about_team">about_team</string>
+    <string name="team_desc">Description</string>
+    <string name="Head">Androidified</string>
+    <string name="desc_content">We are a team of passionate learners, powered by innovation, driven by
+    enthusiasm</string>
+</resources>
