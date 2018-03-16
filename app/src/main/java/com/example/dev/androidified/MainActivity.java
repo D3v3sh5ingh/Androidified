@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+
 
 
 public class MainActivity extends AppCompatActivity
@@ -96,6 +99,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
 
         } else if(id==R.id.about_team){
+            Log.v("About Us", "About Us section to be opened");
             Intent in = new Intent(this, about_team.class);
             startActivity(in);
         }

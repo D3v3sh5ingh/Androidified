@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="1dp"
     android:orientation="vertical">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/about_us"
+        android:cropToPadding="false"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/dev1" />
-</LinearLayout>
+</RelativeLayout>
