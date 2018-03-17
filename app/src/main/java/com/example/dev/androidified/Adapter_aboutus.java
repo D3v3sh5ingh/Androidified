@@ -14,12 +14,12 @@ import android.widget.TextView;
 public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.RecyclerViewHolder> {
 
     String[] about_dev_name,about_dev_skill;
-    Integer[] photos;
-    public Adapter_aboutus(String[] about_dev_name,String[] about_dev_skill,Integer[] photos)
+    Integer[] images;
+    public Adapter_aboutus(String[] about_dev_name,String[] about_dev_skill,Integer[] images)
     {
         this.about_dev_name = about_dev_name ;
         this.about_dev_skill = about_dev_skill ;
-        this.photos = photos;
+        this.images = images;
         // this.photo_links = photo_links ;
     }
     @Override
@@ -34,7 +34,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         holder.Tv_dev_name.setText(about_dev_name[position]);
         holder.Tv_dev_skills.setText(about_dev_skill[position]);
-        holder.imageView.setImageResource(photos[position]);
+        holder.imageView.setImageResource(images[position]);
         // holder.photo_links.setText(photo_links[position]);
     }
 
@@ -45,7 +45,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
 
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
-        TextView Tv_dev_name, Tv_dev_skills, photo_links;
+        TextView Tv_dev_name, Tv_dev_skills ;
         ImageView imageView;
         public RecyclerViewHolder(View view) {
             super(view);
