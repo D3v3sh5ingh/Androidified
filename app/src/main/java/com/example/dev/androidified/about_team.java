@@ -3,6 +3,7 @@ package com.example.dev.androidified;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,6 +31,7 @@ public class about_team extends AppCompatActivity {
 
 
         recyclerView = findViewById(R.id.aboutteam_recycler) ;
+        ViewCompat.setNestedScrollingEnabled(recyclerView, false);
         adapter = new Adapter_aboutus(dev_name,dev_skills /*photo_links*/) ;
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

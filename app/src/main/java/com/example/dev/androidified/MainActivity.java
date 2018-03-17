@@ -103,6 +103,11 @@ public class MainActivity extends AppCompatActivity
             Intent in = new Intent(this, about_team.class);
             startActivity(in);
         }
+        else if(id==R.id.nav_puzzle)
+        {
+            Intent in = new Intent(this, puzzle.class);
+            startActivity(in);
+        }
 
 
 
