@@ -19,7 +19,17 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <include layout="@layout/content_about_team" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aboutteam_recycler"
+        android:scrollbars="vertical"
+        android:layout_marginTop="55dp">
 
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
