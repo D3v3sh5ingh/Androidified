@@ -17,11 +17,11 @@ public class about_team extends AppCompatActivity {
     private RecyclerView.Adapter adapter ;
     private RecyclerView.LayoutManager layoutManager ;
 
-    String[] dev_name = {"Shivam kumar", "Devesh Singh", "Mohit Ranjan", "Harshit Gupta", "Shivang Garg", "Shubham", "Vaishali", "Sameep Yadav", "Yash Gautam"} ;
-    Integer[] photos = {R.drawable.shivam_kumar_small, R.drawable.devesh, R.drawable.mohit, R.drawable.harshith,
-            R.drawable.shivang, R.drawable.shubham, R.drawable.vaishali, R.drawable.sameep, R.drawable.yash_gautam};
+    String[] dev_name = {"Shivam kumar", "Devesh Singh", "Mohit Ranjan", "Harshit Gupta", "Shivang Garg", "Vaishali", "Sameep Yadav", "Yash Gautam"} ;
+    Integer[] images = {R.drawable.shivam_kumar_small, R.drawable.devesh, R.drawable.mohit, R.drawable.harshith,
+            R.drawable.shivang, R.drawable.vaishali, R.drawable.sameep, R.drawable.yash_gautam};
 
-    String[] dev_skills = {"Web and Android Developer","Web and Android Developer","Android Developer","Android Developer","Web and Android Developer","Web Developer","Android Developer","Android Developer","Android Developer" } ;
+    String[] dev_skills = {"Web and Android Developer","Web and Android Developer","Android Developer","Android Developer","Web and Android Developer","Android Developer","Android Developer","Android Developer" } ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class about_team extends AppCompatActivity {
 
 
         recyclerView = findViewById(R.id.aboutteam_recycler) ;
-        adapter = new Adapter_aboutus(dev_name,dev_skills,photos) ;
+        adapter = new Adapter_aboutus(dev_name,dev_skills,images) ;
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
