@@ -14,22 +14,61 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/aboutteam_recycler"
-        android:scrollbars="vertical"
-        android:layout_marginTop="55dp">
+        android:forceHasOverlappingRendering="true"
+        tools:layout_editor_absoluteY="75dp">
 
-    </android.support.v7.widget.RecyclerView>
-</RelativeLayout>
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:layout_marginTop="70dp"
+                    android:fadeScrollbars="true"
+                    android:fadingEdge="vertical"
+                    android:gravity="center"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:text="@string/desc_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:layout_anchorGravity="top|center"
+                    tools:ignore="NotSibling" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/aboutteam_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView2"
+                    android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+
 </android.support.design.widget.CoordinatorLayout>
