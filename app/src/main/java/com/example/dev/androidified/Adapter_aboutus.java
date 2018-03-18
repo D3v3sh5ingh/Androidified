@@ -6,56 +6,52 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import java.util.List;
+
 /**
  * Created by Shivam Kumar on 17-03-2018.
  */
 
-public class Adapter_aboutus extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.RecyclerViewHolder> {
 
-    private static final String TAG = Adapter_aboutus.class.getSimpleName();
-    private static final int TYPE_HEADER = 0;
-    private static final int TYPE_ITEM = 1;
-    private List<ItemObject> itemObjects;
-    public Adapter_aboutus(List<ItemObject> itemObjects)
+    String[] about_dev_name,about_dev_skill;
+    Integer[] images;
+    public Adapter_aboutus(String[] about_dev_name,String[] about_dev_skill,Integer[] images)
     {
+        this.about_dev_name = about_dev_name ;
+        this.about_dev_skill = about_dev_skill ;
+                this.images = images;
 
-        this.itemObjects = itemObjects;
+    }
+    @Override
+    public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.aboutus_row_layout,parent,false) ;
+        RecyclerViewHolder recyclerViewHolder = new RecyclerViewHolder(view) ;
+        return recyclerViewHolder;
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public void onBindViewHolder(RecyclerViewHolder holder, int position) {
+        holder.Tv_dev_name.setText(about_dev_name[position]);
+        holder.Tv_dev_skills.setText(about_dev_skill[position]);
+        holder.imageView.setImageResource(images[position]);
 
-        if (viewType == 0) {
-            View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.header_layout, parent, false);
-            return new HeaderViewHolder(layoutView);
-        } else{
-            View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.aboutus_row_layout, parent, false);
-            return new itemsViewHolder(layoutView);
-        }
-
-    }
-
-    @Override
-    public void onBindViewHolder( RecyclerView.ViewHolder holder, int position) {
-        ItemObject mObject = itemObjects.get(position);
-        if(holder instanceof HeaderViewHolder){
-            ((HeaderViewHolder) holder).headerTitle.setText(mObject.getName());
-        }else if (holder instanceof itemsViewHolder ){
-            ((itemsViewHolder) holder).Tv_dev_name.setText(mObject.getName());
-            ((itemsViewHolder) holder).Tv_dev_skills.setText(mObject.getSkill());
-            ((itemsViewHolder) holder).imageView.setImageResource(mObject.getNo());
-        }
     }
 
     @Override
     public int getItemCount() {
-        return itemObjects.size();
-    }
-    @Override
-    public int getItemViewType(int position) {
-        return position;
+        return about_dev_name.length;
     }
 
 
+    public class RecyclerViewHolder extends RecyclerView.ViewHolder {
+      TextView Tv_dev_name, Tv_dev_skills ;
+        ImageView imageView;
+        public RecyclerViewHolder(View view) {
+            super(view);
+            Tv_dev_name = view.findViewById(R.id.tv_name);
+            Tv_dev_skills = view.findViewById(R.id.tv_skill);
+            imageView = view.findViewById(R.id.pic);
+
+        }
     }
+}
