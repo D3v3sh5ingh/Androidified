@@ -20,16 +20,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:forceHasOverlappingRendering="true"
-        tools:layout_editor_absoluteY="75dp">
-
-
-
-
         <android.support.v4.widget.NestedScrollView
             android:padding="10dp"
             android:layout_width="match_parent"
@@ -39,7 +29,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:descendantFocusability="blocksDescendants">
 
                 <TextView
                     android:id="@+id/textView2"
@@ -47,6 +38,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/toolbar"
                     android:layout_marginTop="70dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="20dp"
                     android:fadeScrollbars="true"
                     android:fadingEdge="vertical"
                     android:gravity="center"
@@ -63,12 +56,13 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView2"
-                    android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
+                    android:scrollbars="vertical">
+
+                </android.support.v7.widget.RecyclerView>
             </LinearLayout>
 
 
         </android.support.v4.widget.NestedScrollView>
 
-    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
