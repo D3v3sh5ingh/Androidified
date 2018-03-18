@@ -19,14 +19,13 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
     {
         this.about_dev_name = about_dev_name ;
         this.about_dev_skill = about_dev_skill ;
-        this.images = images;
-        // this.photo_links = photo_links ;
+                this.images = images;
+
     }
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.aboutus_row_layout,parent,false) ;
         RecyclerViewHolder recyclerViewHolder = new RecyclerViewHolder(view) ;
-
         return recyclerViewHolder;
     }
 
@@ -35,7 +34,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
         holder.Tv_dev_name.setText(about_dev_name[position]);
         holder.Tv_dev_skills.setText(about_dev_skill[position]);
         holder.imageView.setImageResource(images[position]);
-        // holder.photo_links.setText(photo_links[position]);
+
     }
 
     @Override
@@ -45,13 +44,14 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
 
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
-        TextView Tv_dev_name, Tv_dev_skills ;
+      TextView Tv_dev_name, Tv_dev_skills ;
         ImageView imageView;
         public RecyclerViewHolder(View view) {
             super(view);
             Tv_dev_name = view.findViewById(R.id.tv_name);
             Tv_dev_skills = view.findViewById(R.id.tv_skill);
-            imageView = view.findViewById(R.id.shivam_kumar_small);
-            // photo_links = view.findViewById(R.id.shivam_kumar_small) ;
+            imageView = view.findViewById(R.id.pic);
+
         }
-    }}
+    }
+}
