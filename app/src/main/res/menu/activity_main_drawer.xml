@@ -28,7 +28,7 @@
     </group>
     <item
         android:id="@+id/about_team"
-        android:icon="@android:drawable/ic_menu_help"
+        android:icon="@drawable/aboutus"
         android:title="@string/about_us" />
 
 </menu>
