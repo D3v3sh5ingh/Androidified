@@ -53,23 +53,20 @@
 
     <ImageView
         android:id="@+id/iv_facebook"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/iv_github"
+        android:layout_marginStart="32dp"
         android:layout_toEndOf="@+id/iv_github"
-        android:layout_toRightOf="@+id/iv_github"
-        android:layout_marginTop="48dp"
         android:src="@drawable/facebook" />
 
     <ImageView
         android:id="@+id/iv_linkin"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignTop="@+id/iv_facebook"
-        android:layout_marginLeft="34dp"
-        android:layout_marginStart="34dp"
+        android:layout_marginStart="29dp"
         android:layout_toEndOf="@+id/iv_facebook"
-        android:layout_toRightOf="@+id/iv_facebook"
         android:src="@drawable/linkedin" />
 
     <View
