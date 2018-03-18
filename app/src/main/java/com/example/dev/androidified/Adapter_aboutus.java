@@ -6,52 +6,56 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import java.util.List;
 /**
  * Created by Shivam Kumar on 17-03-2018.
  */
 
-public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.RecyclerViewHolder> {
+public class Adapter_aboutus extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    String[] about_dev_name,about_dev_skill;
-    Integer[] images;
-    public Adapter_aboutus(String[] about_dev_name,String[] about_dev_skill,Integer[] images)
+    private static final String TAG = Adapter_aboutus.class.getSimpleName();
+    private static final int TYPE_HEADER = 0;
+    private static final int TYPE_ITEM = 1;
+    private List<ItemObject> itemObjects;
+    public Adapter_aboutus(List<ItemObject> itemObjects)
     {
-        this.about_dev_name = about_dev_name ;
-        this.about_dev_skill = about_dev_skill ;
-        this.images = images;
-        // this.photo_links = photo_links ;
-    }
-    @Override
-    public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.aboutus_row_layout,parent,false) ;
-        RecyclerViewHolder recyclerViewHolder = new RecyclerViewHolder(view) ;
 
-        return recyclerViewHolder;
+        this.itemObjects = itemObjects;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-        holder.Tv_dev_name.setText(about_dev_name[position]);
-        holder.Tv_dev_skills.setText(about_dev_skill[position]);
-        holder.imageView.setImageResource(images[position]);
-        // holder.photo_links.setText(photo_links[position]);
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        if (viewType == 0) {
+            View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.header_layout, parent, false);
+            return new HeaderViewHolder(layoutView);
+        } else{
+            View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.aboutus_row_layout, parent, false);
+            return new itemsViewHolder(layoutView);
+        }
+
+    }
+
+    @Override
+    public void onBindViewHolder( RecyclerView.ViewHolder holder, int position) {
+        ItemObject mObject = itemObjects.get(position);
+        if(holder instanceof HeaderViewHolder){
+            ((HeaderViewHolder) holder).headerTitle.setText(mObject.getName());
+        }else if (holder instanceof itemsViewHolder ){
+            ((itemsViewHolder) holder).Tv_dev_name.setText(mObject.getName());
+            ((itemsViewHolder) holder).Tv_dev_skills.setText(mObject.getSkill());
+            ((itemsViewHolder) holder).imageView.setImageResource(mObject.getNo());
+        }
     }
 
     @Override
     public int getItemCount() {
-        return about_dev_name.length;
+        return itemObjects.size();
+    }
+    @Override
+    public int getItemViewType(int position) {
+        return position;
     }
 
 
-    public class RecyclerViewHolder extends RecyclerView.ViewHolder {
-        TextView Tv_dev_name, Tv_dev_skills ;
-        ImageView imageView;
-        public RecyclerViewHolder(View view) {
-            super(view);
-            Tv_dev_name = view.findViewById(R.id.tv_name);
-            Tv_dev_skills = view.findViewById(R.id.tv_skill);
-            imageView = view.findViewById(R.id.shivam_kumar_small);
-            // photo_links = view.findViewById(R.id.shivam_kumar_small) ;
-        }
-    }}
+    }
