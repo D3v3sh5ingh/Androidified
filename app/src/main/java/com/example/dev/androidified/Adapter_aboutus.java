@@ -18,7 +18,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
     public Adapter_aboutus(String[] about_dev_name,String[] about_dev_skill,Integer[] images)
     {
         this.about_dev_name = about_dev_name ;
-        this.about_dev_skill = about_dev_skill ;
+        //this.about_dev_skill = about_dev_skill ;
                 this.images = images;
 
     }
@@ -32,7 +32,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         holder.Tv_dev_name.setText(about_dev_name[position]);
-        holder.Tv_dev_skills.setText(about_dev_skill[position]);
+        //holder.Tv_dev_skills.setText(about_dev_skill[position]);
         holder.imageView.setImageResource(images[position]);
 
     }
@@ -49,7 +49,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
         public RecyclerViewHolder(View view) {
             super(view);
             Tv_dev_name = view.findViewById(R.id.tv_name);
-            Tv_dev_skills = view.findViewById(R.id.tv_skill);
+           // Tv_dev_skills = view.findViewById(R.id.tv_skill);
             imageView = view.findViewById(R.id.pic);
 
         }
