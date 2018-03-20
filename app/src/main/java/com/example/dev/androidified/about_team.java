@@ -24,8 +24,8 @@ public class about_team extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager ;
 
  String[] dev_name = {"Shivam kumar", "Devesh Singh", "Mohit Ranjan", "Harshit Gupta", "Shivang Garg", "Vaishali Kashyap", "Sameep Yadav", "Yash Gautam"} ;
- Integer[] images = {R.drawable.shivam_kumar_small, R.drawable.devesh, R.drawable.mohit, R.drawable.harshith,
-        R.drawable.shivang, R.drawable.vaishali, R.drawable.sameep, R.drawable.yash_gautam};
+ Integer[] images = {R.drawable.shivam_kumar_small, R.drawable.devesh, R.drawable.mohit, R.drawable.harshit,
+        R.drawable.shivang, R.drawable.vaishali, R.drawable.sameep, R.drawable.yash};
 
    String[] dev_skills = {"Web and Android Developer","Web and Android Developer","Android Developer","Android Developer","Web and Android Developer","Android Developer","Android Developer","Android Developer" } ;
 
