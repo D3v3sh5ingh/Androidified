@@ -24,14 +24,15 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
    // List<DeveloperLink> DevList = new ArrayList<>() ;
     String[] about_dev_name,about_dev_skill;
     Integer[] images;
-    String[] GmailLinks ;
-    public Adapter_aboutus(String[] about_dev_name,Integer[] images,String[] Gmail_links)
+    String[] GmailLinks;
+    Context context;
+    public Adapter_aboutus(String[] about_dev_name,Integer[] images,String[] Gmail_links, Context context)
     {
         this.about_dev_name = about_dev_name ;
         //this.about_dev_skill = about_dev_skill ;
         this.images = images;
         this.GmailLinks = Gmail_links ;
-
+        this.context = context;
 
     }
     @Override
@@ -54,29 +55,48 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
 
         });
     }
+
+    public void sendMail(String link)
+    {
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                "mailto",link, null));
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, " ");
+        context.startActivity(Intent.createChooser(emailIntent, null));
+    }
     private void startGmail(int position) {
-        if(position==0){
-            Log.i("shivam","gmail") ;
-            /*Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                    "mailto", "abc@gmail.com", null));
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "This is my subject text");
-            context.startActivity(Intent.createChooser(emailIntent, null));*/
-        }else if (position==1){
-            Log.i("devesh","gmail") ;
-        }else if (position==2){
-            Log.i("mohit","gmail") ;
-        }else if (position==3){
-            Log.i("Harshith","gmail") ;
-        }else if(position==4){
-            Log.i("Shivang","gmail") ;
-        }else if (position==5){
-            Log.i("Vaishali","gmail") ;
-        }else if (position==6){
-            Log.i("Sameep","gmail") ;
-        }else if (position==7){
-            Log.i("Yash","gmail") ;
+        if(position==0)
+        {
+            sendMail(GmailLinks[0]);
+        }
+        else if (position==1)
+        {
+            sendMail(GmailLinks[1]);
+        }
+        else if (position==2)
+        {
+            sendMail(GmailLinks[2]);
+        }
+        else if (position==3)
+        {
+            sendMail(GmailLinks[3]);
+        }
+        else if(position==4){
+            sendMail(GmailLinks[4]);
+        }
+        else if (position==5)
+        {
+            sendMail(GmailLinks[5]);
+        }
+        else if (position==6)
+        {
+            sendMail(GmailLinks[6]);
+        }
+        else if (position==7)
+        {
+            sendMail(GmailLinks[7]);
         }
     }
+
 
     @Override
     public int getItemCount() {

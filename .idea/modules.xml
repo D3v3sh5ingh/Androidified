@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Androidified.iml" filepath="$PROJECT_DIR$/Androidified.iml" />
-      <module fileurl="file://C:\Users\Shivam Kumar\AndroidStudioProjects\Androidified\Androidified.iml" filepath="C:\Users\Shivam Kumar\AndroidStudioProjects\Androidified\Androidified.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
