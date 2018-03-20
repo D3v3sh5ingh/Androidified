@@ -51,7 +51,7 @@ public class about_team extends AppCompatActivity {
            "mohitr1999@gmail.com",
            "harshitgupta.219@gmail.com",
            "shivanggarg1998@gmail.com",
-           "d3v3sh.singh@gmail.com",
+           "kashyapvaishali1998@gmail.com",
            "Sameepyadav@gmail.com",
            "yash.gautam0003@gmail.com"};
 
@@ -66,7 +66,7 @@ public class about_team extends AppCompatActivity {
 
 
         recyclerView = findViewById(R.id.aboutteam_recycler) ;
-        adapter = new Adapter_aboutus(dev_name,images,GmailLink) ;
+        adapter = new Adapter_aboutus(dev_name,images,GmailLink, this) ;
         layoutManager = new GridLayoutManager(this,2);
         ViewCompat.setNestedScrollingEnabled(recyclerView, false);
         recyclerView.setLayoutManager(layoutManager);
