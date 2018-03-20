@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/splashscreen_bg_gradient"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.dev.androidified.SplashActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/main_logo" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="/?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/app_name"
-        android:textColor="#ff0000"
-        android:textSize="40dp"
-        android:textStyle="bold"/>
+        android:layout_marginBottom="131dp"
+        android:progressTint="@android:color/holo_red_dark" />
+
 </RelativeLayout>
