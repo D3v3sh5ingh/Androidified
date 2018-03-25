@@ -21,7 +21,7 @@ import java.util.List;
 
 public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.RecyclerViewHolder> {
 
-   // List<DeveloperLink> DevList = new ArrayList<>() ;
+   // List<DeveloperLink> DevList = new ArrayList<>();
     String[] about_dev_name,about_dev_skill;
     Integer[] images;
     String[] GmailLinks;
@@ -58,8 +58,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
 
     public void sendMail(String link)
     {
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto",link, null));
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto",link, null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, " ");
         context.startActivity(Intent.createChooser(emailIntent, null));
     }
