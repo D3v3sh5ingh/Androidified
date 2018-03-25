@@ -143,7 +143,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
     }
 
 
-    public class RecyclerViewHolder extends RecyclerView.ViewHolder {
+    public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
       TextView Tv_dev_name, Tv_dev_skills ;
         ImageView imageView;
         ImageView iv_gmail ;
