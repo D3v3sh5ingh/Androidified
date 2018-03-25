@@ -54,6 +54,15 @@ public class about_team extends AppCompatActivity {
            "kashyapvaishali1998@gmail.com",
            "Sameepyadav@gmail.com",
            "yash.gautam0003@gmail.com"};
+    String[] facebookLink = {
+            "https://www.facebook.com/shivam.kumar.167",
+            "https://www.fb.com/d3v3sh5ingh",
+            "http://www.facebook.com/mohit.ranjan.560",
+            "https://www.facebook.com/hg2199",
+            "https://www.facebook.com/shivanggarg1998",
+            null,
+            "https://www.facebook.com/sameep.yadav.3",
+            "http://www.facebook.com/shivanggarg1998"};
 
 
     @Override
@@ -66,7 +75,7 @@ public class about_team extends AppCompatActivity {
 
 
         recyclerView = findViewById(R.id.aboutteam_recycler) ;
-        adapter = new Adapter_aboutus(dev_name,images,GmailLink,githubLink, this) ;
+        adapter = new Adapter_aboutus(dev_name,images,GmailLink,githubLink,facebookLink,this) ;
         layoutManager = new GridLayoutManager(this,2);
         ViewCompat.setNestedScrollingEnabled(recyclerView, false);
         recyclerView.setLayoutManager(layoutManager);
