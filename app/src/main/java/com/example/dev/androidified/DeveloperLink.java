@@ -1,8 +1,5 @@
 package com.example.dev.androidified;
 
-/**
- * Created by Shivam Kumar on 19-03-2018.
- */
 
 public class DeveloperLink {
 public int id ;
