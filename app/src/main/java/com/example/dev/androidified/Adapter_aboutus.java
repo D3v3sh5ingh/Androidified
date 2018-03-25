@@ -15,23 +15,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by Shivam Kumar on 17-03-2018.
- */
-
 public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.RecyclerViewHolder> {
 
    // List<DeveloperLink> DevList = new ArrayList<>();
     String[] about_dev_name,about_dev_skill;
     Integer[] images;
     String[] GmailLinks;
+    String[] GithubLink;
     Context context;
-    public Adapter_aboutus(String[] about_dev_name,Integer[] images,String[] Gmail_links, Context context)
+    public Adapter_aboutus(String[] about_dev_name,Integer[] images,String[] Gmail_links,String[] githubLink, Context context)
     {
         this.about_dev_name = about_dev_name ;
         //this.about_dev_skill = about_dev_skill ;
         this.images = images;
         this.GmailLinks = Gmail_links ;
+        this.GithubLink=githubLink;
         this.context = context;
 
     }
@@ -51,6 +49,13 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
             @Override
             public void onClick(View view) {
                    startGmail(position) ;
+            }
+
+        });
+        holder.iv_github.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startGithub(position) ;
             }
 
         });
@@ -95,6 +100,40 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
             sendMail(GmailLinks[7]);
         }
     }
+    private void startGithub(int position) {
+            if(position==0){
+                Opengithub(GithubLink[0]);
+            }
+            if(position==1){
+                Opengithub(GithubLink[1]);
+            }
+            else if(position==2){
+                Opengithub(GithubLink[2]);
+            }
+            else if(position==3){
+                Opengithub(GithubLink[3]);
+            }
+            else if(position==4){
+                Opengithub(GithubLink[4]);
+            }
+            else if(position==5){
+                Opengithub(GithubLink[5]);
+            }
+            else if(position==6){
+                Opengithub(GithubLink[6]);
+            }
+            else if(position==7){
+                Opengithub(GithubLink[7]);
+            }
+
+    }
+
+    private void Opengithub(String links)
+    {
+        Intent browserIntent  = new Intent(Intent.ACTION_VIEW, Uri.parse(links));
+        context.startActivity(Intent.createChooser(browserIntent, null));
+
+    }
 
 
     @Override
@@ -103,16 +142,18 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
     }
 
 
-    public class RecyclerViewHolder extends RecyclerView.ViewHolder {
+    public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
       TextView Tv_dev_name, Tv_dev_skills ;
         ImageView imageView;
         ImageView iv_gmail ;
+        ImageView iv_github;
         public RecyclerViewHolder(View view) {
             super(view);
             Tv_dev_name = view.findViewById(R.id.tv_name);
            // Tv_dev_skills = view.findViewById(R.id.tv_skill);
             imageView = view.findViewById(R.id.pic);
             iv_gmail = view.findViewById(R.id.iv_gmail) ;
+            iv_github = view.findViewById(R.id.iv_github) ;
 
         }
     }
