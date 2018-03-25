@@ -14,6 +14,10 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
         <item
+            android:id="@+id/nav_Game"
+            android:icon="@drawable/download"
+            android:title="Games" />
+        <item
             android:id="@+id/nav_puzzle"
             android:icon="@drawable/puzzle"
             android:title="Puzzles" />

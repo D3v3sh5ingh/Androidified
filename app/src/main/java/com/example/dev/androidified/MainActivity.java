@@ -107,6 +107,10 @@ public class MainActivity extends AppCompatActivity
         {
             Intent in = new Intent(this, puzzle.class);
             startActivity(in);
+        }else if (id==R.id.nav_Game)
+        {
+            Intent intent = new Intent(MainActivity.this,Game_Activity.class) ;
+            startActivity(intent);
         }
 
 
