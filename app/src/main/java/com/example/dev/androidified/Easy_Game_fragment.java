@@ -15,8 +15,8 @@ import android.widget.ImageView;
 
 public class Easy_Game_fragment extends Fragment {
 
-    Integer[] GamePhotos = {R.drawable.shivam_kumar_small, R.drawable.devesh, R.drawable.mohit, R.drawable.harshith,
-            R.drawable.shivang, R.drawable.vaishali, R.drawable.sameep, R.drawable.yash_gautam} ;
+    Integer[] GamePhotos = {R.drawable.shivam_kumar_small, R.drawable.devesh, R.drawable.mohit, R.drawable.harshit,
+            R.drawable.shivang, R.drawable.vaishali, R.drawable.sameep, R.drawable.yash} ;
     RecyclerView RV_easy ;
     RecyclerView.Adapter Adapter ;
     RecyclerView.LayoutManager layoutManager ;
