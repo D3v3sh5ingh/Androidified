@@ -4,14 +4,25 @@
     android:layout_height="match_parent"
     tools:context="com.example.dev.androidified.Hard_Puzzle_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/hard_puzzle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Top Paid Fragment"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        />
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/top_bar"
+            layout="@layout/puzzle_toolbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_puzzle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_bar">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
 
 </FrameLayout>

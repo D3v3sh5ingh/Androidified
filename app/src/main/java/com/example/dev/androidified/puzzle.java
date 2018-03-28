@@ -26,6 +26,7 @@ public class puzzle extends AppCompatActivity {
         viewPagerAdapter.addFragments(new Medium_Puzzle_fragment(), "Medium");
         viewPagerAdapter.addFragments(new Hard_Puzzle_fragment(), "Hard");
         viewPagerAdapter.addFragments(new Expert_Puzzle_fragment(), "Expert");
+        getSupportActionBar().setTitle("Puzzles");
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
