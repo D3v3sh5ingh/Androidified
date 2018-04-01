@@ -159,7 +159,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
             OpenFacebook(FacebookLink[4]);
         }
         else if(position==5){
-
+            OpenFacebook(FacebookLink[4]);
         }
         else if(position==6){
             OpenFacebook(FacebookLink[6]);
