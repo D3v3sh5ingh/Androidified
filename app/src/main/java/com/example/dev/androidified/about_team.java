@@ -34,17 +34,17 @@ public class about_team extends AppCompatActivity {
         R.drawable.shivang, R.drawable.vaishali, R.drawable.sameep, R.drawable.yash};
 
   // String[] dev_skills = {"Web and Android Developer","Web and Android Developer","Android Developer","Android Developer","Web and Android Developer","Android Developer","Android Developer","Android Developer" } ;
-/*
+
    String[] githubLink = {
-           "https://github.com/shivamkumard107",
+           "https://www.github.com/shivamkumard107",
            "https://www.github.com/d3v3sh5ingh",
-           "https://github.com/MohitR1999",
-           "https://github.com/hg2199",
-           "https://github.com/shivanggarg1998",
+           "https://www.github.com/MohitR1999",
+           "https://www.github.com/hg2199",
+           "https://www.github.com/shivanggarg1998",
            "https://www.github.com/d3v3sh5ingh",
-           "https://github.com/Sam9905",
-           "https://github.com/yashgautam1221"
-   };*/
+           "https://www.github.com/Sam9905",
+           "https://www.github.com/yashgautam1221"
+   };
    String[] GmailLink = {
            "shivam.kumard107@gmail.com",
            "d3v3sh.singh@gmail.com",
@@ -54,6 +54,15 @@ public class about_team extends AppCompatActivity {
            "kashyapvaishali1998@gmail.com",
            "Sameepyadav@gmail.com",
            "yash.gautam0003@gmail.com"};
+    String[] facebookLink = {
+            "https://www.facebook.com/shivam.kumar.167",
+            "https://www.fb.com/d3v3sh5ingh",
+            "http://www.facebook.com/mohit.ranjan.560",
+            "https://www.facebook.com/hg2199",
+            "https://www.facebook.com/shivanggarg1998",
+            null,
+            "https://www.facebook.com/sameep.yadav.3",
+            "https://www.facebook.com/shivanggarg1998"};
 
 
     @Override
@@ -66,7 +75,7 @@ public class about_team extends AppCompatActivity {
 
 
         recyclerView = findViewById(R.id.aboutteam_recycler) ;
-        adapter = new Adapter_aboutus(dev_name,images,GmailLink, this) ;
+        adapter = new Adapter_aboutus(dev_name,images,GmailLink,githubLink,facebookLink,this) ;
         layoutManager = new GridLayoutManager(this,2);
         ViewCompat.setNestedScrollingEnabled(recyclerView, false);
         recyclerView.setLayoutManager(layoutManager);
