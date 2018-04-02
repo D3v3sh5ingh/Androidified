@@ -62,7 +62,7 @@ public class about_team extends AppCompatActivity {
             "https://www.facebook.com/shivanggarg1998",
             null,
             "https://www.facebook.com/sameep.yadav.3",
-            "http://www.facebook.com/shivanggarg1998"};
+            "https://www.facebook.com/shivanggarg1998"};
 
 
     @Override

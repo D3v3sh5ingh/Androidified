@@ -65,11 +65,13 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
             }
 
         });
+        if(position!=5)
         holder.iv_facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {startFacebook(position);
             }
         });
+        else holder.iv_facebook.setVisibility(View.INVISIBLE);
     }
 
     public void sendMail(String link)
@@ -157,7 +159,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
             OpenFacebook(FacebookLink[4]);
         }
         else if(position==5){
-            OpenFacebook(FacebookLink[5]);
+            OpenFacebook(FacebookLink[4]);
         }
         else if(position==6){
             OpenFacebook(FacebookLink[6]);
@@ -179,6 +181,7 @@ public class Adapter_aboutus extends RecyclerView.Adapter<Adapter_aboutus.Recycl
     {   PackageManager packageManager = context.getPackageManager();
         Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
         String facebookUrl = links;
+        if(links==null) ;
         boolean activated=false;
         //Checks whether app present or not @author hg2199
         try {
