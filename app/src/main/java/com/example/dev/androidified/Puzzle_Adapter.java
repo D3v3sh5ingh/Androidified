@@ -4,12 +4,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Puzzle_Adapter extends RecyclerView.Adapter<Puzzle_Adapter.PuzzleViewHolder> {
-    Integer PuzzlePics[];
-    public Puzzle_Adapter(Integer PuzzlePics[]) {
-        this.PuzzlePics = PuzzlePics;
+    String[] puzzletitles;
+    String[] puzzledesc;
+    public Puzzle_Adapter(String[] puzzletitles, String[] puzzledesc) {
+        this.puzzledesc = puzzledesc;
+        this.puzzletitles= puzzletitles;
     }
 
     @Override
@@ -22,19 +26,21 @@ public class Puzzle_Adapter extends RecyclerView.Adapter<Puzzle_Adapter.PuzzleVi
 
     @Override
     public void onBindViewHolder(PuzzleViewHolder holder, int position) {
-        holder.puzzleImage.setImageResource(PuzzlePics[position]);
+        holder.puzzlename.setText(puzzletitles[position]);
+        holder.puzzledesc.setText(puzzledesc[position]);
     }
 
     @Override
     public int getItemCount() {
-        return PuzzlePics.length;
+        return puzzledesc.length;
     }
 
     public static class PuzzleViewHolder extends RecyclerView.ViewHolder{
-        ImageView puzzleImage;
+        TextView puzzlename, puzzledesc;
         public PuzzleViewHolder(View itemView) {
             super(itemView);
-            puzzleImage = itemView.findViewById(R.id.puzzle_image);
+            puzzlename = itemView.findViewById(R.id.puzzle_name);
+            puzzledesc = itemView.findViewById(R.id.puzzle_desc);
         }
     }
 }
