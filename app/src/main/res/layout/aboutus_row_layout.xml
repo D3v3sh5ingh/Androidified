@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -16,7 +17,6 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -55,8 +55,9 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@+id/tv_name"
-        android:layout_marginStart="21dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginStart="21dp"
+        android:onClick="githubLink"
         android:src="@drawable/github" />
 
     <ImageView
@@ -74,8 +75,8 @@
         android:layout_height="30dp"
         android:layout_alignTop="@+id/iv_facebook"
         android:layout_marginStart="10dp"
-        android:onClick="Gmail_Click"
         android:layout_toEndOf="@+id/iv_facebook"
+        android:onClick="Gmail_Click"
         android:src="@drawable/if_gmail_1220367" />
 
 
