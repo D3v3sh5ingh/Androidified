@@ -13,7 +13,7 @@
        android:layout_height="wrap_content"
        android:layout_alignParentTop="true"
        android:layout_centerHorizontal="true"
-       android:layout_marginTop="14dp"
+       android:layout_marginTop="33dp"
        android:text="@string/Head"
        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
        app:layout_constraintBottom_toBottomOf="parent"
