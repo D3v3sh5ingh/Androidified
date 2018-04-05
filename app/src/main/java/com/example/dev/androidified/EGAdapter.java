@@ -6,9 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-/**
- * Created by Shivam Kumar on 25-03-2018.
- */
 
 public class EGAdapter extends RecyclerView.Adapter<EGAdapter.EasyGameViewHolder> {
     Integer[] GamePhotos ;
