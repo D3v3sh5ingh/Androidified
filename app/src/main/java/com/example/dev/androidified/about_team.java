@@ -56,7 +56,7 @@ public class about_team extends AppCompatActivity {
            "yash.gautam0003@gmail.com"};
     String[] facebookLink = {
             "https://www.facebook.com/shivam.kumar.167",
-            "https://www.fb.com/d3v3sh5ingh",
+            "https://www.facebook.com/d3v3sh5ingh",
             "http://www.facebook.com/mohit.ranjan.560",
             "https://www.facebook.com/hg2199",
             "https://www.facebook.com/shivanggarg1998",
