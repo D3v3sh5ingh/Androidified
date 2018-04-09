@@ -1,0 +1,17 @@
+Games Detail
+
+
+Game one: Devesh's Hearts
+Number of player : 2 or more
+Rules : Devesh have a random number of hearts to give to spread happiness.Two players (numbered 1 and 2) will be playing a game with hearts. Player  always plays first, and the two players move in alternating turns. The game's rules are as follows:
+
+*In a single move, a player can remove either 2, 3 , or  hearts from the total number of hearts.
+*If a player is unable to make a move, that player loses the game.
+Can you survive till the end? 
+
+
+
+Game two: Shivam's lucky number
+Number of player : 5 or more
+Rules : Shivam have his own algorithm to choose his lucky number.he asked his friends to suggest a number in between 1 to 1000 and the number which comes out to be closest to the 2/3rd of the average of all input will be shivams lucky number
+The problem require to think not only your number but also other user's input.
