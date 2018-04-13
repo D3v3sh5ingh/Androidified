@@ -1,0 +1,27 @@
+Easy puzzles :
+
+# Puzzle 1
+	Name : The Boxes
+	Statement : There are three boxes. One is labeled "APPLES" another is labeled "ORANGES". The last one is labeled "APPLES AND ORANGES". You know that each is labeled incorrectly. 
+				You may ask me to pick one fruit from one box which you choose.How can you label the boxes correctly?
+	Hint : No hint available
+	Solution:Pick from the one labeled "Apples & Oranges". This box must contain either only apples or only oranges.
+			E.g. if you find an Orange, label the box Orange, then change the Oranges box to Apples, and the Apples box to "Apples & Oranges."
+
+# Puzzle 2
+	Name :  The Double Doors
+	Statement : You are trapped in a room with two doors. One leads to certain death and the other leads to freedom. You don't know which is which.
+				There are two robots guarding the doors. They will let you choose one door but upon doing so you must go through it.
+				You can, however, ask one robot one question. The problem is one robot always tells the truth ,the other always lies and you don't know which is which.
+	Hint: 	The two robots know each others personality. That they talk when they're bored, lonely, etc. Try to get the two robots to cancel their evil & good ways out.Solution:Pick from the one labeled "Apples & Oranges". This box must contain either only apples or only oranges.
+			E.g. if you find an Orange, label the box Orange, then change the Oranges box to Apples, and the Apples box to "Apples & Oranges."
+	Solution: Ask one robot what the other robot would say, if it was asked which door was safe. Then go through the other door.
+	
+# Puzzle 3
+	Name :  The Double Doors
+	Statement : A frog is at the bottom of a 30 meter well. Each day he summons enough energy for one 3 meter leap up the well. Exhausted, he then hangs there for the rest of the day. At night, while he is asleep, he slips 2 meters backwards. How many days does it take him to escape from the well?
+				Note: Assume after the first leap that his hind legs are exactly three meters up the well. His hind legs must clear the well for him to escape.	
+	Hint: Try to think the problem through for a five meter well. Now what is the solution for the 30 meter well?			
+	Solution: 28
+			Each day he makes it up another meter, and then on the twenty seventh day he can leap three meters and climb o
+	
