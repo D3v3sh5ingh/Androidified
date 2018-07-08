@@ -17,7 +17,7 @@ Easy puzzles:
 			E.g. if you find an Orange, label the box Orange, then change the Oranges box to Apples, and the Apples box to "Apples & Oranges."
 	Solution: Ask one robot what the other robot would say, if it was asked which door was safe. Then go through the other door.
 	
-# Puzzle 3
+## Puzzle 3
 	Name :  The Double Doors
 	Statement : A frog is at the bottom of a 30 meter well. Each day he summons enough energy for one 3 meter leap up the well. Exhausted, he then hangs there for the rest of the day. At night, while he is asleep, he slips 2 meters backwards. How many days does it take him to escape from the well?
 				Note: Assume after the first leap that his hind legs are exactly three meters up the well. His hind legs must clear the well for him to escape.	
