@@ -1,6 +1,6 @@
 Easy puzzles:
 
-# Puzzle 1
+## Puzzle 1
 	Name : The Boxes
 	Statement : There are three boxes. One is labeled "APPLES" another is labeled "ORANGES". The last one is labeled "APPLES AND ORANGES". You know that each is labeled incorrectly. 
 				You may ask me to pick one fruit from one box which you choose.How can you label the boxes correctly?
