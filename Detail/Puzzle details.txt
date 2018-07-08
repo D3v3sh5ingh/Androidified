@@ -8,7 +8,7 @@ Easy puzzles:
 	Solution:Pick from the one labeled "Apples & Oranges". This box must contain either only apples or only oranges.
 			E.g. if you find an Orange, label the box Orange, then change the Oranges box to Apples, and the Apples box to "Apples & Oranges."
 
-# Puzzle 2
+## Puzzle 2
 	Name :  The Double Doors
 	Statement : You are trapped in a room with two doors. One leads to certain death and the other leads to freedom. You don't know which is which.
 				There are two robots guarding the doors. They will let you choose one door but upon doing so you must go through it.
