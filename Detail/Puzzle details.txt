@@ -1,4 +1,4 @@
-Easy puzzles :
+Easy puzzles:
 
 # Puzzle 1
 	Name : The Boxes
